@@ -4,49 +4,40 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: #f4f4f4;
+    margin: 0;
+}
+
+/* Container to keep title above calculator */
+.container {
+    text-align: center;
 }
 
 .calculator {
-    background: #222;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    width: 220px;
+    margin-top: 10px;
 }
 
-#display {
+#result {
     width: 100%;
-    height: 50px;
+    height: 40px;
+    font-size: 18px;
     margin-bottom: 10px;
-    font-size: 20px;
     text-align: right;
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
 }
 
 .buttons {
     display: grid;
-    grid-template-columns: repeat(4, 60px);
-    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
 }
 
 button {
-    height: 50px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
+    height: 45px;
+    font-size: 16px;
     cursor: pointer;
 }
 
-.operator {
-    background: orange;
-    color: white;
-}
-
-.equal {
-    background: green;
-    color: white;
+.zero {
     grid-column: span 2;
 }
 
