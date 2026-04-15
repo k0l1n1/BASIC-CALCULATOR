@@ -1,49 +1,59 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Simple Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
-<div class="container">
-    <h2>Simple Calculator</h2>
+    <div class="container">
+        <h2>Simple Calculator</h2>
 
-    <div class="calculator">
-        <input type="text" id="result" readonly>
+        <div class="calculator">
+            <input type="text" id="result" readonly>
 
-        <div class="buttons">
-            <button onclick="clearDisplay()">C</button>
-            <button onclick="erase()">⌫</button>
-            <button onclick="appendValue('/')">/</button>
-            <button onclick="appendValue('*')">*</button>
+            <div class="buttons">
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="erase()">⌫</button>
+                <button onclick="appendValue('/')">/</button>
+                <button onclick="appendValue('*')">*</button>
 
-            <button onclick="appendValue('7')">7</button>
-            <button onclick="appendValue('8')">8</button>
-            <button onclick="appendValue('9')">9</button>
-            <button onclick="appendValue('-')">-</button>
+                <button onclick="appendValue('7')">7</button>
+                <button onclick="appendValue('8')">8</button>
+                <button onclick="appendValue('9')">9</button>
+                <button onclick="appendValue('-')">-</button>
 
-            <button onclick="appendValue('4')">4</button>
-            <button onclick="appendValue('5')">5</button>
-            <button onclick="appendValue('6')">6</button>
-            <button onclick="appendValue('+')">+</button>
+                <button onclick="appendValue('4')">4</button>
+                <button onclick="appendValue('5')">5</button>
+                <button onclick="appendValue('6')">6</button>
+                <button onclick="appendValue('+')">+</button>
 
-            <button onclick="appendValue('1')">1</button>
-            <button onclick="appendValue('2')">2</button>
-            <button onclick="appendValue('3')">3</button>
-            <button onclick="calculate()">=</button>
+                <button onclick="appendValue('1')">1</button>
+                <button onclick="appendValue('2')">2</button>
+                <button onclick="appendValue('3')">3</button>
+                <button onclick="calculate()">=</button>
 
-            <button onclick="appendValue('0')" class="zero">0</button>
+                <button onclick="appendValue('0')" class="zero">0</button>
+            </div>
         </div>
+        <div class="links">
+            <button onclick="window.open('https://github.com/k0l1n1', '_blank')" class="github" title="GitHub"><i
+                    class="fab fa-github"></i></button>
+            <button onclick="window.open('https://www.linkedin.com/in/kolin-biju-kulangara-6b126535b/', '_blank')"
+                class="linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></button>
+            <button onclick="window.open('https://www.instagram.com/_k01in_/', '_blank')" class="instagram"
+                title="Instagram"><i class="fab fa-instagram"></i></button>
+        </div>
+        <button id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+            <i class="fas fa-moon"></i>
+        </button>
     </div>
-</div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
-</html>
-</div>
 
-<script src="script.js"></script>
-</body>
 </html>

@@ -1,47 +1,179 @@
 body {
-    font-family: Arial;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: #c3d5e9;
+    transition: background-color 0.3s;
 }
 
-/* Container to keep title above calculator */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
 .container {
     text-align: center;
 }
 
 .calculator {
-    width: 220px;
-    margin-top: 10px;
+    width: 260px;
+    background: #d5e6e5;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .calculator {
+    background: #2d2d2d;
+    border-color: #444;
 }
 
 #result {
     width: 100%;
-    height: 40px;
-    font-size: 18px;
-    margin-bottom: 10px;
+    height: 50px;
+    font-size: 22px;
+    margin-bottom: 15px;
     text-align: right;
+    padding: 10px;
+    border: 2px solid #eee;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background: #fafafa;
+}
+
+body.dark-mode #result {
+    background: #1e1e1e;
+    border-color: #444;
+    color: white;
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
+    gap: 8px;
 }
 
 button {
-    height: 45px;
-    font-size: 16px;
+    height: 50px;
+    font-size: 18px;
     cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #ffffff;
+    transition: background 0.2s, transform 0.1s;
+    font-family: inherit;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
-.zero {
-    grid-column: span 2;
+button:hover {
+    background: #f0f0f0;
+}
+
+button:active {
+    transform: translateY(1px);
+
+}
+
+body.dark-mode button {
+    background: #3d3d3d;
+    border-color: #555;
+    color: white;
+}
+
+body.dark-mode button:hover {
+    background: #4d4d4d;
 }
 
 .clear {
-    background: red;
+    background: #fee !important;
+    color: #d32f2f !important;
+    border-color: #ffcdd2 !important;
+}
+
+.zero {
+    grid-column: span 4;
+}
+
+
+.links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.links button {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-size: 28px;
+    color: #777;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.github:hover {
+    color: #000;
+    transform: scale(1.1);
+}
+
+.linkedin:hover {
+    color: #0077b5;
+    transform: scale(1.1);
+}
+
+.instagram:hover {
+    color: #e4405f;
+    transform: scale(1.1);
+}
+
+body.dark-mode .links button {
+    color: #999;
+}
+
+body.dark-mode .github:hover {
+    color: #fff;
+}
+
+body.dark-mode .linkedin:hover {
+    color: #fff;
+}
+
+body.dark-mode .instagram:hover {
+    color: #fff;
+}
+
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.dark-mode #theme-toggle {
+    background-color: #333;
+    color: black;
+    border: 1px solid #444;
+}
+
+body.dark-mode .links button {
+    color: #ffffff;
+}
+
+body.dark-mode .fa-star,
+body.dark-mode .fa-sun {
     color: white;
+    text-shadow: 0 0 10px rgba(115, 105, 51, 0.162);
 }
